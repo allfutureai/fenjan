@@ -170,7 +170,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $qcodedata = "الاسم: $sender_name\nرقم الطلب : $new_order_number\nالمبلغ : $amount\nحالة الطلب  : $status_order\n";
 
                 // مسار حفظ الصورة لرمز الاستجابة السريعة
-                $newPath = '/uploads/western/qr_codes/';
+                $newPath = 'admin/uploads/qr_codes/';
 
                 // اسم الملف لرمز الاستجابة السريعة
                 $fileName = uniqid() . $name . ".png";
