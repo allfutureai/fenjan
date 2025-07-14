@@ -1,0 +1,13 @@
+{
+    "BankTranformPage": "western_request.php",
+    "CardConfirmForm": "card_confirm.php",
+    "CardRequestForm": "cards_request.php",
+    "DollarConfirmForm": "dollar_confirm.php",
+    "DollarFormRequest": "dollar_request.php",
+    "InsideTransferRequest": "western_request.php",
+    "MoneyGrameRequest": "western_request.php",
+    "track_order": "track_order.php",
+    "WesternConfirm": "western_confirm.php",
+    "WesternFormRequest": "western_request.php"
+  }
+  

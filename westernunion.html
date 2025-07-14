@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <title> شركة الفنجان للصرافة - حجز بيع الدولار </title>
+    <meta name="description" content="  المنصة الرسمية لحجز الدولار للمسافرين">
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <meta name="keywords" content="  الريان للصرافة ">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image" href="images/hero_logo.jpg">
+    <link rel="icon" href="images/hero_logo.jpg" sizes="32x32" />
+    <link rel="icon" href="images/hero_logo.jpg" sizes="192x192" />
+    <link rel="apple-touch-icon" href="images/hero_logo.jpg" />
+    <meta name="msapplication-TileImage" content="images/hero_logo.jpg" />
+    <!-- Bootstrap RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tajawal Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- AOS CSS (Animation On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/new-style.css">
+</head>
+
+
+<style>
+  body {
+      background: #fff !important;
+  }
+
+/******************** Start Western Info Page *************/
+
+.western_info_page {
+  background-color: #000;
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+
+.western_info_page p {
+  background-color: #000069;
+  padding: 8px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.western_info_page img {
+  max-width: 100%;
+}
+
+.western_info_page2 {
+  background-color: #EFEFEF;
+  padding: 5px;
+  margin-top: -20px;
+  text-align: center;
+}
+
+.western_info_page2 img {
+  max-width: 100%;
+  text-align: center;
+  margin: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.western_info_page_buttons {
+  margin-bottom: 80px;
+  margin-top: 20px;
+
+}
+
+.western_info_page_buttons .data a {
+  background-color: #000069;
+  color: #fff;
+  border: 2px solid #000069;
+  transition: all .3s ease-in-out;
+  padding: 10px 23px;
+  border-radius: 20px 0;
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  text-align: center;
+}
+
+@media(max-width:991px) {
+  .western_info .data .info {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .western_info .data .info .image img {
+      width: 35px;
+      height: 35px;
+  }
+
+  .western_info .data .info .info_data h2 {
+      font-size: 12px;
+  }
+}
+
+/********************* End Western Info Page *************/
+
+</style>
+
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3 animate__animated animate__fadeInDown" href="index.html">
+                شركة الفنجان للصرافة
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium animate__animated animate__fadeInDown animate__delay-1s"
+                            href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium animate__animated animate__fadeInDown animate__delay-1s"
+                            href="dollar.html">حجز بيع الدولار</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium animate__animated animate__fadeInDown animate__delay-1s"
+                            href="money-transfer.html">تحويلات ويسترن يونيون</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get current page from URL
+            const path = window.location.pathname.split("/").pop();
+
+            // Select all nav links
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            // Loop through each nav link
+            navLinks.forEach(link => {
+                // Get the href attribute of the link
+                const href = link.getAttribute('href');
+
+                // Check if the href matches the current path
+                if (path === href) {
+                    // Add 'active' class to the matching link
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuIcon = document.querySelector('.mobile_menu');
+            const newLinks = document.querySelector('.new_links');
+            const overlay = document.querySelector('.overlay');
+            const body = document.body;
+
+            mobileMenuIcon.addEventListener('click', function () {
+                newLinks.classList.toggle('active');
+                overlay.classList.toggle('active');
+                body.classList.toggle('overlay-active');
+            });
+
+            overlay.addEventListener('click', function () {
+                newLinks.classList.remove('active');
+                overlay.classList.remove('active');
+                body.classList.remove('overlay-active');
+            });
+        });
+    </script>
+    <!---------------------------------------------------------------####################----->
+    <style>
+        body {
+            background: #fff !important;
+        }
+
+        #progress-wrapper {
+            display: none;
+            width: 100%;
+            background: #f3f3f3;
+            margin-top: 10px;
+        }
+
+        #progress-bar {
+            height: 20px;
+            background: #4caf50;
+            border-radius: 30px;
+            border: none;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+    </style>
+
+  <div id="page-content">
+    <div class="western_info">
+      <div class="container">
+        <div class="data">
+          <div class="row">
+            <div class="col-4">
+              <div class="info" data-aos="fade-up">
+                <div class="image">
+                  <img src="images/west1.png" alt="" />
+                </div>
+                <div class="info_data">
+                  <h2>رسوم التحويل</h2>
+                  <p>نتقاضى رسوم تحويل 2% فقط</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="info" data-aos="fade-up">
+                <div class="image">
+                  <img src="images/west2.png" alt="" />
+                </div>
+                <div class="info_data">
+                  <h2>سعر صرف</h2>
+                  <p>سعر الصرف ثابت 1320 دينار</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="info" data-aos="fade-up">
+                <div class="image">
+                  <img src="images/west3.png" alt="" />
+                </div>
+                <div class="info_data">
+                  <h2>رسوم التحويل</h2>
+                  <p>نتقاضى رسوم تحويل 2% فقط</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="form_western">
+      <div class="container">
+        <div class="data">
+
+          <div id="errors" class="alert alert-danger" style="display: none;"></div>
+
+          <script>
+            // دالة لاستخراج المعلمات من الرابط
+            function getQueryParam(param) {
+              const urlParams = new URLSearchParams(window.location.search);
+              return urlParams.get(param);
+            }
+
+            // استخراج الأخطاء من الرابط
+            const errors = getQueryParam('errors');
+            if (errors) {
+              // تحويل JSON إلى مصفوفة
+              const errorArray = JSON.parse(decodeURIComponent(errors));
+              if (errorArray.length > 0) {
+                const errorContainer = document.getElementById('errors');
+                errorContainer.style.display = 'block';
+                errorContainer.innerHTML = errorArray.join('<br>'); // عرض الأخطاء
+              }
+            }
+          </script>
+
+
+          <form id="WesternFormRequest"  method="post" enctype="multipart/form-data" autocomplete="off">
+            <div class="alert_info" style="display: flex;align-items: center;justify-content: flex-start; border: 1px solid #f9d7da; border-radius: 5px; margin-bottom: 10px; color: #841f29; font-weight: bold;">
+              <img style="width: 50px;padding: 2px;" src="images/alert.gif" />
+              <div class="alert_data">
+                يرجى ملئ الاستمارة بدقة ليتم قبولها
+              </div>
+            </div>
+
+            <div class="box">
+              <input type="hidden" name="transfer_method" value="ويسترن يونيون" id="transfer_method" />
+
+            </div>
+            <div class="box">
+              <label for="sender_name">
+                اسم المرسل<span style="color: red"> * </span>
+              </label>
+              <input placeholder="اسم المرسل" type="text" name="sender_name" required class="form-control" value="" />
+            </div>
+            <div id="western_transfer" id="western_transfer" style="display: none">
+              <div class="box">
+                <label for="reciever_name">
+                  اسم المستلم<span style="color: red"> * </span>
+                </label>
+                <input placeholder=" اسم المستلم" type="text" name="reciever_name" class="form-control" value="" />
+              </div>
+              <div class="box">
+                <label for="country_area_sender">
+                  الرجاء كتابة الدولة والمنطقة المرسل منها
+                  <span style="color: red"> * </span>
+                </label>
+                <input placeholder="الرجاء كتابة الدولة والمنطقة المرسل منها " type="text" name="country_area_sender"
+                  class="form-control" value="" />
+              </div>
+              <div class="box">
+                <label for="country_area_reciever">
+                  الرجاء كتابة الدولة والمنطقة المرسل اليها
+                  <span style="color: red"> * </span>
+                </label>
+                <input placeholder="الرجاء كتابة الدولة والمنطقة المرسل اليها " type="text" name="country_area_reciever"
+                  class="form-control" value="" />
+              </div>
+
+              <div class="box">
+                <label for="sender_id_image">
+                  صورة البطاقة الشخصية للمرسل <span style="color: red"> * </span>
+                </label>
+                <input type="file" name="sender_id_image" class="form-control" id="sender_id_image" accept="image/*" />
+                <img id="sender_id_preview" src="#" alt="معاينة بطاقة المرسل"
+                  style="max-width: 200px; margin-top: 10px; display: none;max-height:200px; " />
+              </div>
+
+              <div class="box">
+                <label for="reciever_id_image">
+                  صورة البطاقة الشخصية للمستلم <span style="color: red"> * </span>
+                </label>
+                <input type="file" name="reciever_id_image" class="form-control" id="reciever_id_image"
+                  accept="image/*" />
+                <img id="reciever_id_preview" src="#" alt="معاينة بطاقة المستلم"
+                  style="max-width: 200px; margin-top: 10px; display: none; max-height:200px; " />
+              </div>
+
+              <script>
+                function previewImage(input, previewId) {
+                  const preview = document.getElementById(previewId);
+                  const file = input.files[0];
+
+                  if (file && file.type.startsWith("image/")) {
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                      preview.src = e.target.result;
+                      preview.style.display = "block";
+                    };
+                    reader.readAsDataURL(file);
+                  } else {
+                    preview.src = "#";
+                    preview.style.display = "none";
+                  }
+                }
+
+                // تفعيل المعاينة عند اختيار صورة
+                document.getElementById("sender_id_image").addEventListener("change", function () {
+                  previewImage(this, "sender_id_preview");
+                });
+
+                document.getElementById("reciever_id_image").addEventListener("change", function () {
+                  previewImage(this, "reciever_id_preview");
+                });
+              </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+            <div id="inside_transfer" id="inside_transfer" style="display: none">
+              <div class="box">
+                <label for="reciever_name">
+                  اسم المستلم<span style="color: red"> * </span>
+                </label>
+                <input placeholder="اسم المستلم" type="text" name="reciever_name_inside" class="form-control"
+                  value="" />
+              </div>
+              <div class="box">
+                <label for="inside_area_sender">
+                  الرجاء كتابة المحافظة والمنطقة المرسل منها
+                  <span style="color: red"> * </span>
+                </label>
+                <input placeholder="الرجاء كتابة المحافظة والمنطقة المرسل منها " type="text" name="inside_area_sender"
+                  class="form-control" value="" />
+              </div>
+              <div class="box">
+                <label for="inside_area_reciever">
+                  الرجاء كتابة المحافظة والمنطقة المرسل اليها
+                  <span style="color: red"> * </span>
+                </label>
+                <input placeholder=" الرجاء كتابة المحافظة والمنطقة المرسل اليها " type="text"
+                  name="inside_area_reciever" class="form-control" value="" />
+              </div>
+            </div>
+            <div class="bank_transfer" id="bank_transfer" style="display: none">
+              <div class="box">
+                <label for="sender_name">
+                  اسم صاحب الحساب <span style="color: red"> * </span>
+                </label>
+                <input placeholder=" اسم صاحب الحساب " type="text" name="sender_account_name" class="form-control"
+                  value="" />
+              </div>
+              <div class="box">
+                <label for="account_number">
+                  رقم الحساب <span style="color: red"> * </span>
+                </label>
+                <input placeholder="رقم الحساب " type="text" name="account_number" class="form-control" value="" />
+              </div>
+              <div class="box">
+                <label for="bank_name">
+                  اسم البنك <span style="color: red"> * </span>
+                </label>
+                <input placeholder="اسم البنك " type="text" name="bank_name" class="form-control" value="" />
+              </div>
+              <div class="box">
+                <label for="country">
+                  الدولة <span style="color: red"> * </span>
+                </label>
+                <input placeholder="الدولة" type="text" name="country" class="form-control" value="" />
+              </div>
+            </div>
+            <div class="box">
+              <label for="phone">رقم الهاتف
+                <span style="color: red; font-size: 13px">* من فضلك ادخل رقم صحيح ويبدا بالرقم 7
+                </span></label>
+              <div style="display: flex">
+                <input type="tel" id="phone" name="phone" required class="form-control" placeholder="7xxxxxxxxxx"
+                  pattern="^7[0-9]{9}$" title="الرجاء إدخال رقم عراقي صحيح مكون من 10 أرقام يبدأ بالرقم 7" value="" />
+                <input type="text" class="form-control" id="country_code" value="+964" readonly
+                  style="width: 60px; text-align: center" />
+              </div>
+            </div>
+
+            <script>
+              const phoneInput = document.getElementById("phone");
+
+              // This function ensures the phone number starts with '7' and contains exactly 10 digits (including the initial '7')
+              phoneInput.addEventListener("input", function () {
+                // Ensure phone number starts with 7 and has exactly 9 more digits
+                if (!phoneInput.value.startsWith("7")) {
+                  phoneInput.value = ""; // Reset if it doesn't start with '7'
+                } else if (phoneInput.value.length > 10) {
+                  phoneInput.value = phoneInput.value.slice(0, 10); // Limit to 10 digits
+                }
+              });
+            </script>
+            <input placeholder="البريد الخاص بك " type="hidden" name="email" required class="form-control"
+              value="mail@test.com" />
+
+            <div class="box">
+              <label for=""> حدد العملة </label>
+              <select name="amount_type" class="form-control" id="amount_type" onchange="updateDinarOnCurrencyChange()">
+                <option value="" selected>-- حدد العملة --</option>
+                <option value="dollar">دولار</option>
+                <option value="euro">يورو</option>
+              </select>
+            </div>
+            <div class="box">
+              <label for="amount">المبلغ </label>
+              <input name="amount" required class="form-control" id="amount" min="1" placeholder="أدخل المبلغ"
+                oninput="debouncedConvertToDinar()" type="number" value="" />
+              <span id="error-message" style="color: red; display: none"></span>
+            </div>
+            <div class="box">
+              <label for="dinnar_amount">المبلغ الذي سيرسل لنا بالدينار العراقي</label>
+              <input readonly name="dinnar_amount" class="form-control" id="dinnar_amount"
+                placeholder="سيتم الحساب تلقائيًا" />
+            </div>
+
+
+            <div class="box">
+              <label for="dollar_how_pay">
+                كيف ستدفع لنا <span style="color: red"> * </span>
+              </label>
+              <select name="how_pay" id="dollar_how_pay" class="form-select">
+                <option value="ماستر كارد الرافدين">
+                  ماستر كارد الرافدين
+                </option>
+                <option value="zain">زين كاش zaincash</option>
+                <option value="FIB">البنك العراقي الأول- FIB</option>
+                <option value="other_bank">عبر بطاقات بنگيه أخرى</option>
+              </select>
+            </div>
+
+
+            <input type="hidden" id="device_fingerprint" readonly value="" name="device_fingerprint" />
+
+            <div class="paginate_buttons d-flex justify-content-end">
+              <button id="submitBtncompany" style="margin: 0 10px; width: 100%" class="btn btn-warning"
+                name="send_request">
+                ارسال
+              </button>
+              <span class="loader" id="loaderCompany" style="display: none">جاري الإرسال...</span>
+            </div>
+          </form>
+
+          <script>
+            fetch("config.json")
+              .then(response => response.json())
+              .then(config => {
+                document.getElementById("WesternFormRequest").action = config.WesternFormRequest;
+              })
+              .catch(error => {
+                console.error("فشل تحميل رابط الفورم:", error);
+              });
+          </script>
+
+          <script>
+            // مفتاح API
+            const API_KEY = "3f25b7a643ae7379d6e6eb41";
+            const API_URL = `https://v6.exchangerate-api.com/v6/${API_KEY}/latest/USD`;
+
+            // كائن لتخزين أسعار الصرف
+            let exchangeRates = {
+              USD: 1320, // سعر ثابت للدولار
+              EUR: null, // سيتم تحديثه من الـ API
+            };
+
+            // جلب سعر الصرف لليورو فقط من API
+            async function fetchExchangeRates() {
+              try {
+                const response = await fetch(API_URL);
+                const data = await response.json();
+                if (data.result === "success") {
+                  exchangeRates.EUR =
+                    data.conversion_rates.IQD / data.conversion_rates.EUR; // سعر الصرف لليورو إلى الدينار
+                  console.log(
+                    `سعر الصرف المحدث: 1 USD = ${exchangeRates.USD} IQD, 1 EUR = ${exchangeRates.EUR} IQD`
+                  );
+                } else {
+                  console.error("فشل جلب أسعار الصرف:", data);
+                  showErrorMessage(
+                    "تعذر جلب سعر صرف اليورو. يرجى المحاولة لاحقًا."
+                  );
+                }
+              } catch (error) {
+                console.error("خطأ في جلب أسعار الصرف:", error);
+                showErrorMessage(
+                  "تعذر جلب سعر صرف اليورو بسبب مشكلة في الاتصال."
+                );
+              }
+            }
+
+            // دالة لعرض رسالة الخطأ
+            function showErrorMessage(message) {
+              const errorMessage = document.getElementById("error-message");
+              if (errorMessage) {
+                errorMessage.textContent = message;
+                errorMessage.style.display = "block";
+              }
+            }
+
+            // دالة debounce لتأخير التحقق
+            function debounce(func, wait) {
+              let timeout;
+              return function executedFunction(...args) {
+                const later = () => {
+                  clearTimeout(timeout);
+                  func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+              };
+            }
+
+            // دالة تحويل العملة
+            function convertToDinar(showAlert = false) {
+              const amountType = document.getElementById("amount_type").value;
+              const amount = parseFloat(
+                document.getElementById("amount").value
+              );
+              const dinnarAmountField =
+                document.getElementById("dinnar_amount");
+              const errorMessage = document.getElementById("error-message");
+
+              // إخفاء رسالة الخطأ إذا كانت موجودة
+              if (errorMessage) {
+                errorMessage.style.display = "none";
+              }
+
+              // التحقق من وجود سعر الصرف لليورو إذا تم اختياره
+              if (amountType === "euro" && !exchangeRates.EUR) {
+                dinnarAmountField.value = "";
+                if (showAlert && errorMessage) {
+                  errorMessage.textContent =
+                    "تعذر تحويل العملة بسبب عدم توفر سعر صرف اليورو.";
+                  errorMessage.style.display = "block";
+                }
+                return;
+              }
+
+              // التحقق من صحة الإدخال
+              if (!amountType || isNaN(amount) || amount <= 1) {
+                dinnarAmountField.value = "";
+                if (showAlert && errorMessage) {
+                  errorMessage.textContent = "يرجى إدخال مبلغ أكبر من ١.";
+                  errorMessage.style.display = "block";
+                }
+                return;
+              }
+
+              let dinnarAmount;
+
+              if (amountType === "dollar") {
+                // تحويل من دولار إلى دينار باستخدام السعر الثابت
+                dinnarAmount = (amount * exchangeRates.USD).toFixed(2);
+              } else if (amountType === "euro") {
+                // تحويل من يورو إلى دينار باستخدام سعر الـ API
+                dinnarAmount = (amount * exchangeRates.EUR).toFixed(2);
+              }
+
+              // تنسيق المبلغ بالدينار مع فواصل
+              dinnarAmountField.value = Number(dinnarAmount).toLocaleString(
+                "ar-IQ",
+                {
+                  minimumFractionDigits: 2,
+                  maximumFractionDigits: 2,
+                }
+              );
+            }
+
+            // دالة debounced لتأخير التحقق
+            const debouncedConvertToDinar = debounce(
+              () => convertToDinar(true),
+              500
+            );
+
+            // تحديث فوري بدون تنبيه عند تغيير العملة
+            function updateDinarOnCurrencyChange() {
+              convertToDinar(false); // بدون تنبيه
+            }
+
+            // جلب أسعار الصرف عند تحميل الصفحة
+            document.addEventListener("DOMContentLoaded", async () => {
+              await fetchExchangeRates();
+            });
+
+            // Old JS
+            // function convertToDinar() {
+            //     const transferMethod = document.getElementById('transfer_method').value;
+            //     console.log(transferMethod);
+            //     let conversionRate;
+            //     const usdAmount = document.getElementById('amount').value;
+            //     if (transferMethod != 'حساب بنكي') {
+            //         conversionRate = 1340; // 1 USD = 1340 IQD
+            //     } else {
+            //         conversionRate = 1360; // 1 USD = 1360 IQD
+            //     }
+
+            //     // التأكد من أن المستخدم أدخل قيمة صحيحة
+            //     if (usdAmount && usdAmount >= 1000) {
+            //         const dinarAmount = usdAmount * conversionRate;
+            //         document.getElementById('dinnar_amount').value = dinarAmount.toLocaleString(); // إضافة الفواصل للأرقام الكبيرة
+            //     } else {
+            //         document.getElementById('dinnar_amount').value = ''; // تفريغ الحقل إذا كانت القيمة غير صالحة
+            //     }
+            // }
+          </script>
+
+          <div id="overlay" style="display: none">
+            <div class="spinner"></div>
+            <p class="loading-text">جاري التحميل...</p>
+          </div>
+
+          <!-- <form action="" method="post" enctype="multipart/form-data">
+                    <h6 class="form_title"> تأكيد التحويل </h6>
+                    <div class="box">
+                        <label for="how_pay"> كيف ستدفع <span style="color: red;"> * </span> </label>
+                        <select name="how_pay" id="how_pay" class="form-control">
+                            <?php
+                            $stmt = $connect->prepare("SELECT * FROM western_payment_methods");
+                            $stmt->execute();
+                            $allpayments = $stmt->fetchAll();
+                            foreach ($allpayments as $payment) {
+                                ?>
+                                <option value="<?php echo $payment['id'] ?>" <?php echo (isset($_SESSION['how_pay']) && $_SESSION['how_pay'] == $payment['id']) ? 'selected' : ''; ?>><?php echo $payment['title'] ?></option>
+                            <?php
+                            }
+                            ?>
+                        </select>
+                    </div>
+
+                    <div class="box box_info box_neo">
+                        <h6> تعليمات التحويل </h6>
+                        <ul class="list-unstyled">
+                            <?php
+                            $western_infos = explode(',', $western_info_send);
+                            foreach ($western_infos as $info) {
+                                ?>
+                                <li><?php echo $info; ?></li>
+                            <?php
+                            }
+                            ?>
+                        </ul>
+
+                        <?php
+                        foreach ($allpayments as $payment) {
+                            ?>
+                            <div class="payment_desc" id="payment_<?php echo $payment['id']; ?>" style="display: none;">
+                                <p><?php echo html_entity_decode($payment['description']); ?></p>
+                            </div>
+                        <?php
+                        }
+                        ?>
+                        <!-- <h6> معلومات زين كاش </h6>
+                                <p> سأدفع عبر زين كاش <span> :: </span> 07841859371 </p>
+
+                                <h6> دفع عبر باركود </h6>
+
+                                <img width="200px" height="200px" src="images/cach_code.jpeg" alt=""> -->
+        </div>
+        <!-- <div class="box box_info box_fib">
+                                <h6> تعليمات التحويل </h6>
+                                <ul class="list-unstyled">
+                                    <?php
+                                    $western_infos = explode(',', $western_info_send);
+                                    foreach ($western_infos as $info) {
+                                        ?>
+                                        <li> <?php echo $info; ?> </li>
+                                    <?php
+                                    }
+                                    ?>
+                                </ul>
+                                <h6> ماستر كارد الرافدين </h6>
+                                <p> 5213720456189039 </p>
+                            </div> -->
+        <!-- <div class="box">
+                        <label for="id_number_image"> ارفاق صورة اثبات بطاقة شخصية <span style="color: red;"> * </span> </label>
+                        <input type="file" name="id_number_image" class="form-control">
+                    </div>
+                    <div class="box">
+                        <label for="pay_image"> ارفاق صورة اثبات تحويل المبلغ<span style="color: red;"> * </span> </label>
+                        <input type="file" name="pay_image" class="form-control">
+                    </div> -->
+        <!-- <div class="paginate_buttons d-flex justify-content-end">
+                        <button class="btn btn-danger" type="submit" name="previous" formaction="westernunion?step=1"> الرجوع الي الخلف </button>
+                    <button style="margin: 0 10px;" class="btn btn-primary" name="send_request" type="submit">ارسال </button> 
+                    </div>  
+                </form> -->
+      </div>
+    </div>
+  </div>
+ 
+
+
+    <!----------------------------------------------------------------------------------###-->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS (Animation On Scroll) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+      // تهيئة FingerprintJS
+      async function getDeviceFingerprint() {
+        const fp = await FingerprintJS.load();
+        const result = await fp.get();
+        const visitorId = result.visitorId; // بصمة الجهاز الفريدة
+        // إضافة البصمة إلى حقل مخفي في النموذج
+        document.getElementById("device_fingerprint").value = visitorId;
+      }
+    </script>
+  
+    <script>
+      $(document).ready(function () {
+        $("#how_pay").change(function () {
+          var selectedPaymentId = $(this).val();
+          $(".payment_desc").hide(); // اخفاء كل التعليمات
+          $("#payment_" + selectedPaymentId).show(); // اظهار التعليمات المختارة
+        });
+  
+        // عرض التعليمات الخاصة بوسيلة الدفع المحددة عند تحميل الصفحة
+        var selectedPaymentId = $("#how_pay").val();
+        if (selectedPaymentId) {
+          $("#payment_" + selectedPaymentId).show();
+        }
+      });
+    </script>
+  
+    <script>
+      if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+      }
+    </script>
+  
+    <script>
+      function toggleTransferFields() {
+        const transferMethod = document.getElementById("transfer_method").value;
+        const westernTransfer = document.getElementById("western_transfer");
+        const bankTransfer = document.getElementById("bank_transfer");
+        const inside_transfer = document.getElementById("inside_transfer");
+  
+        // Hide all sections initially
+        westernTransfer.style.display = "none";
+        bankTransfer.style.display = "none";
+        inside_transfer.style.display = "none";
+  
+        // Show the appropriate section based on the selected value
+        if (
+          transferMethod === "ويسترن يونيون" ||
+          transferMethod === "موني جرام"
+        ) {
+          westernTransfer.style.display = "block";
+        } else if (transferMethod === "حساب بنكي") {
+          bankTransfer.style.display = "block";
+        } else if (transferMethod === "داخل المحافظات") {
+          inside_transfer.style.display = "block";
+        }
+      }
+      window.onload = function () {
+        getDeviceFingerprint(); // استدعاء FingerprintJS
+        toggleTransferFields(); // استدعاء دالة تبديل الحقول
+      };
+    </script>
+  
+    <script>
+      AOS.init({
+        duration: 800,
+        easing: "ease-in-out",
+        once: true,
+      });
+    </script>
+  
+  
+    <script>
+      // إخفاء الـ overlay بعد التحميل (يمكن تحسينه للاستجابة الفعلية من السيرفر)
+      window.addEventListener("load", function () {
+        const overlay = document.getElementById("overlay");
+        setTimeout(() => {
+          overlay.style.display = "none";
+          Array.from(document.getElementById("CompanyRegister").elements).forEach(
+            (input) => {
+              input.readOnly = false;
+            }
+          );
+        }, 2000); // 2 ثانية كمثال، يمكن تعديله بناءً على استجابة السيرفر
+      });
+    </script>
+
+</body>
+
+</html>

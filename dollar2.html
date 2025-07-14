@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <title> شركة الفنجان للصرافة - حجز بيع الدولار </title>
+    <meta name="description" content="  المنصة الرسمية لحجز الدولار للمسافرين">
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <meta name="keywords" content="  الريان للصرافة ">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image" href="images/hero_logo.jpg">
+    <link rel="icon" href="images/hero_logo.jpg" sizes="32x32" />
+    <link rel="icon" href="images/hero_logo.jpg" sizes="192x192" />
+    <link rel="apple-touch-icon" href="images/hero_logo.jpg" />
+    <meta name="msapplication-TileImage" content="images/hero_logo.jpg" />
+    <!-- Bootstrap RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tajawal Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- AOS CSS (Animation On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/new-style.css">
+</head>
+
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3 animate__animated animate__fadeInDown" href="index.html">
+                شركة الفنجان للصرافة
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium animate__animated animate__fadeInDown animate__delay-1s"
+                            href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium animate__animated animate__fadeInDown animate__delay-1s"
+                            href="dollar.html">حجز بيع الدولار</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium animate__animated animate__fadeInDown animate__delay-1s"
+                            href="money-transfer.html">تحويلات ويسترن يونيون</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get current page from URL
+            const path = window.location.pathname.split("/").pop();
+
+            // Select all nav links
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            // Loop through each nav link
+            navLinks.forEach(link => {
+                // Get the href attribute of the link
+                const href = link.getAttribute('href');
+
+                // Check if the href matches the current path
+                if (path === href) {
+                    // Add 'active' class to the matching link
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuIcon = document.querySelector('.mobile_menu');
+            const newLinks = document.querySelector('.new_links');
+            const overlay = document.querySelector('.overlay');
+            const body = document.body;
+
+            mobileMenuIcon.addEventListener('click', function () {
+                newLinks.classList.toggle('active');
+                overlay.classList.toggle('active');
+                body.classList.toggle('overlay-active');
+            });
+
+            overlay.addEventListener('click', function () {
+                newLinks.classList.remove('active');
+                overlay.classList.remove('active');
+                body.classList.remove('overlay-active');
+            });
+        });
+    </script>
+    <!---------------------------------------------------------------####################----->
+    <style>
+        body {
+            background: #fff !important;
+        }
+
+        #progress-wrapper {
+            display: none;
+            width: 100%;
+            background: #f3f3f3;
+            margin-top: 10px;
+        }
+
+        #progress-bar {
+            height: 20px;
+            background: #4caf50;
+            border-radius: 30px;
+            border: none;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+    </style>
+
+    <div id="page-content">
+        <br>
+        <br>
+        <div class="form_western form_dollar">
+            <div class="container">
+                <div class="data"> 
+                    <script>
+                        // دالة لاستخراج المعلمات من الرابط
+                        function getQueryParam(param) {
+                          const urlParams = new URLSearchParams(window.location.search);
+                          return urlParams.get(param);
+                        }
+            
+                        // استخراج الأخطاء من الرابط
+                        const errors = getQueryParam('errors');
+                        if (errors) {
+                          // تحويل JSON إلى مصفوفة
+                          const errorArray = JSON.parse(decodeURIComponent(errors));
+                          if (errorArray.length > 0) {
+                            const errorContainer = document.getElementById('errors');
+                            errorContainer.style.display = 'block';
+                            errorContainer.innerHTML = errorArray.join('<br>'); // عرض الأخطاء
+                          }
+                        }
+                      </script>
+                    <form method="post" id="DollarFormRequest" enctype="multipart/form-data">
+                        <h3
+                            style="color: #505458;text-align: center;margin-bottom: 40px;font-size: 20px;font-weight: 600;">
+                            حجز بيع دولار </h3>
+                        <div class="box">
+                            <label for="where_receieve_dollar"> الفرع </label>
+                            <select name="where_receieve_dollar" id="where_receieve_dollar" class="form-control">
+                                <option value="" disabled="" selected=""> - اختر الفرع - </option>
+                                <option value="شركة الفنجان فرع - مطار بغداد الدولي "> شركة الفنجان فرع - مطار بغداد
+                                    الدولي </option>
+                                <option value=" شركة الفنجان فرع -  مطار البصرة الدولي "> شركة الفنجان فرع - مطار البصرة
+                                    الدولي </option>
+                                <option value=" شركة الفنجان  فرع -  مطار النجف الدولي  "> شركة الفنجان فرع - مطار النجف
+                                    الدولي </option>
+                                <option value=" شركة الفنجان فرع - مطار كركوك الدولي "> شركة الفنجان فرع - مطار كركوك
+                                    الدولي </option>
+                                <option value="  TBI - مطار السليمانية الدولي فرع  "> TBI - مطار السليمانية الدولي فرع
+                                </option>
+                                <option value="TBI - مطار اربيل الدولي فرع "> TBI - مطار اربيل الدولي فرع </option>
+                                <option value=" شركة الفنجان - فروع المحافظات "> شركة الفنجان - فروع المحافظات </option>
+                            </select>
+                        </div>
+                        <div class="box">
+                            <label for="port_type"> نوع السفر </label>
+                            <select name="port_type" id="port_type" class="form-control">
+                                <option value="" selected="" disabled=""> - اختر نوع السفر  - </option>  
+                                <option value="مسافر بري">  مسافر   بري </option>
+                               
+                                    <option value="مسافر طيران"> مسافر   طيران </option>
+                                </select>
+                        </div>
+
+                        <div class="box">
+                            <label for="dollar_name"> الاسم بالكامل </label>
+                            <input type="text" name="dollar_name" required class="form-control"
+                                value="">
+                        </div>
+
+                        <div class="box">
+                            <label for="dollar_phone"> رقم الهاتف </label>
+                            <input type="text" name="dollar_phone" required class="form-control"
+                                value="">
+                        </div>
+
+                        <div class="box">
+                            <label for="travel_to"> جهة السفر </label>
+                            <input type="text" name="travel_to" required class="form-control"
+                                value="">
+                        </div>
+
+
+
+                        <div class="box">
+                            <label for="dollar_amount"> المبلغ المطلوب بالدولار <span style="color: red;"> * </span>
+                            </label>
+                            <select name="dollar_amount" class="form-select" id="">
+                                <option value="" selected="" disabled=""> - اختر المبلغ المطلوب بالدولار - </option>
+                                <option value=" 3.960.000 دينار عراقي - 3000$ ">  3.960.000 دينار عراقي - 3000$  </option>
+                                <option value="  6600.000 دينار عراقي - 5000$">   6600.000 دينار عراقي - 5000$ </option>
+                            </select>
+                        </div>
+
+                        <div class="box">
+                            <label for="travel_date"> تاريخ السفر </label>
+                            <input type="date" name="travel_date" required class="form-control"
+                                value="">
+                        </div>
+                        <div class="box">
+                            <label for="dollar_how_pay"> طريقة الدفع والايداع </label>
+                            <select name="dollar_how_pay" id="dollar_how_pay" class="form-control">
+                                <option value="سأدفع عبر زين كاش"> سأدفع عبر زين كاش</option>
+                                <option value="سأدفع عبر ماستر كارد الرافدين"> سأدفع عبر ماستر كارد الرافدين</option>
+                                <option value="سأدفع عبر البنك العراق الأولFIB"> سأدفع عبر البنك العراق الأولFIB</option>
+                        </select>
+                        </div> 
+
+
+                        <div class="box">
+                            <label for="passport_image"> ارفاق صورة جواز السفر <span style="color: red;"> * </span></label>
+                            <input type="file" required name="passport_image" class="form-control" id="passport_image"
+                              accept="image/*">
+                            <img id="passport_preview" src="#" alt="معاينة جواز السفر"
+                              style="max-width: 200px;max-height:200px; margin-top: 10px; display: none;">
+                          </div>
+              
+                          <div class="box" id="ticket_image_box">
+                            <label for="ticket_image"> ارفاق صورة تذكرة السفر <span style="color: red;"> * </span></label>
+                            <input type="file" name="ticket_image" class="form-control" id="ticket_image" accept="image/*">
+                            <img id="ticket_preview" src="#" alt="معاينة تذكرة السفر"
+                              style="max-width: 200px;max-height:200px; margin-top: 10px; display: none;">
+                          </div>
+              
+                          <script>
+                            function previewImage(input, previewId) {
+                              const preview = document.getElementById(previewId);
+                              const file = input.files[0];
+              
+                              if (file && file.type.startsWith("image/")) {
+                                const reader = new FileReader();
+                                reader.onload = function (e) {
+                                  preview.src = e.target.result;
+                                  preview.style.display = "block";
+                                };
+                                reader.readAsDataURL(file);
+                              } else {
+                                preview.src = "#";
+                                preview.style.display = "none";
+                              }
+                            }
+              
+                            // ربط الأحداث
+                            document.getElementById("passport_image").addEventListener("change", function () {
+                              previewImage(this, "passport_preview");
+                            });
+              
+                            document.getElementById("ticket_image").addEventListener("change", function () {
+                              previewImage(this, "ticket_preview");
+                            });
+                          </script>
+              
+
+
+
+
+
+
+
+
+
+                        <div id="progress-wrapper">
+                            <div id="progress-bar"></div>
+                        </div>
+                        <div class="paginate_buttons">
+                            <button class="btn" style="background:#f35958;color: #fff;margin: 5px;padding: 4px 35px;"
+                                type="submit" name="previous" formaction="dollar.html"> رجوع </button>
+                            <button style="background: #008000;color: #fff;margin: 5px;padding: 4px 35px;" class="btn"
+                                name="send_dollar_request" type="submit">ارسال </button>
+                        </div>
+                    </form>
+
+                    <script>
+                        fetch("config.json")
+                          .then(response => response.json())
+                          .then(config => {
+                            document.getElementById("DollarFormRequest").action = config.DollarFormRequest;
+                          })
+                          .catch(error => {
+                            console.error("فشل تحميل رابط الفورم:", error);
+                          });
+                      </script>
+            
+        
+                </div>
+            </div>
+
+            <script>
+                document.getElementById('uploadForm').addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    var form = this;
+                    var formData = new FormData(form);
+                    var xhr = new XMLHttpRequest();
+
+                    xhr.upload.addEventListener('progress', function (e) {
+                        var percent = e.lengthComputable ? (e.loaded / e.total) * 100 : 0;
+                        document.getElementById('progress-wrapper').style.display = 'block';
+                        document.getElementById('progress-bar').style.width = percent.toFixed(2) + '%';
+                    });
+
+                    xhr.open('POST', form.action, true);
+                    xhr.onload = function () {
+                        if (xhr.status == 200) {
+                            var response = JSON.parse(xhr.responseText);
+                            if (response.success) {
+                                window.location.href = 'dollar_confirm'; // إعادة التوجيه إلى صفحة التأكيد
+                            } else {
+                                alert(response.message || 'حدث خطأ أثناء التسجيل.');
+                            }
+                        } else {
+                            alert('حدث خطأ أثناء رفع الملف.');
+                        }
+                    };
+
+                    xhr.send(formData);
+
+                });
+            </script>
+        </div>
+
+    </div>
+    <style>
+        .box_neo {
+            display: block;
+        }
+
+        .box_fib {
+            display: none;
+        }
+
+        .box_raf {
+            display: none;
+        }
+    </style>
+
+
+
+
+
+    <!----------------------------------------------------------------------------------###-->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS (Animation On Scroll) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // تهيئة AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: 'ease-in-out',
+        });
+
+        // تأثير الشريط العلوي عند التمرير
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // تأثير ظهور العناصر عند التمرير
+        const serviceCards = document.querySelectorAll('.service-card-modern');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        serviceCards.forEach(card => {
+            observer.observe(card);
+        });
+
+        // تأثيرات Fade In عند التحميل
+        document.addEventListener('DOMContentLoaded', function () {
+            const fadeElements = document.querySelectorAll('.fade-in');
+
+            fadeElements.forEach(el => {
+                setTimeout(() => {
+                    el.classList.add('show');
+                }, 200);
+            });
+        });
+    </script>
+    <div class="whatsapp_bottom" data-aos="fade-up">
+        <a href="https://wa.me/+964%2007872488447"> <img style="width: 50px;" src="images/whatsapp.png" alt=""> </a>
+    </div>
+
+</body>
+
+</html>
