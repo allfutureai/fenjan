@@ -106,7 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <script>
                 // تمرير المتغيرات من PHP إلى JavaScript
                 window.location.href =
-                    'dollar_confirm.html?booking_id=<?php echo urlencode($new_order_number); ?>&name=<?php echo urlencode($dollar_name); ?>&travel_date=<?php echo urlencode($travel_date); ?>&qr_code=<?php echo urlencode($fullFilePath); ?>';
+                    'dollar_confirm.html?booking_id=<?php echo urlencode($new_order_number); ?>&branch=<?php echo urlencode($where_receieve_dollar); ?>&name=<?php echo urlencode($dollar_name); ?>&amount=<?php echo urlencode($dollar_amount); ?>&travel_date=<?php echo urlencode($travel_date); ?>&qr_code=<?php echo urlencode($fullFilePath); ?>';
             </script> 
             <?php
             }

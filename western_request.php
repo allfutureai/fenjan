@@ -188,12 +188,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 var newOrderNumber = "<?php echo urlencode($new_order_number); ?>";
 var senderName = "<?php echo urlencode($sender_name); ?>";
 var mtcn = "<?php echo urlencode($mtcn); ?>";
+var amount = "<?php echo urlencode($amount); ?>";
 var fullFilePath = "<?php echo urlencode($fullFilePath); ?>";
 
 // تجميع الرابط مع المتغيرات
 var url = 'western_confirm.html?booking_id=' + encodeURIComponent(newOrderNumber) +
     '&name=' + encodeURIComponent(senderName) + '&mtc=' + encodeURIComponent(mtcn) + '&qr_code=' + encodeURIComponent(
-        fullFilePath);
+        fullFilePath) + '&amount=' + encodeURIComponent(amount);
 window.location.href = url;
 </script>
 <?php

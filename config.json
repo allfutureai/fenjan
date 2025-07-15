@@ -1,13 +1,13 @@
 {
-    "BankTranformPage": "https://dashboard-orders.com/western_request.php",
-    "CardConfirmForm": "https://dashboard-orders.com/card_confirm.php",
-    "CardRequestForm": "https://dashboard-orders.com/cards_request.php",
-    "DollarConfirmForm": "https://dashboard-orders.com/dollar_confirm.php",
-    "DollarFormRequest": "https://dashboard-orders.com/dollar_request.php",
-    "InsideTransferRequest": "https://dashboard-orders.com/western_request.php",
-    "MoneyGrameRequest": "https://dashboard-orders.com/western_request.php",
-    "track_order": "https://dashboard-orders.com/track_order.php",
-    "WesternConfirm": "https://dashboard-orders.com/western_confirm.php",
-    "WesternFormRequest": "https://dashboard-orders.com/western_request.php"
+    "BankTranformPage": "http://dashboard-orders.com/western_request.php",
+    "CardConfirmForm": "http://dashboard-orders.com/card_confirm.php",
+    "CardRequestForm": "http://dashboard-orders.com/cards_request.php",
+    "DollarConfirmForm": "http://dashboard-orders.com/dollar_confirm.php",
+    "DollarFormRequest": "http://dashboard-orders.com/dollar_request.php",
+    "InsideTransferRequest": "http://dashboard-orders.com/western_request.php",
+    "MoneyGrameRequest": "http://dashboard-orders.com/western_request.php",
+    "track_order": "http://dashboard-orders.com/track_order.php",
+    "WesternConfirm": "http://dashboard-orders.com/western_confirm.php",
+    "WesternFormRequest": "http://dashboard-orders.com/western_request.php"
   }
   

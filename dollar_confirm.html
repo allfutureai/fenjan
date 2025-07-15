@@ -359,6 +359,8 @@
                         const name = urlParams.get("name");
                         const travelDate = urlParams.get("travel_date");
                         const qrCode = urlParams.get("qr_code");
+                        const amount = urlParams.get("amount");
+                        const branch = urlParams.get("branch");
 
                         document.getElementById("bookingIdInput").value = bookingId;
 
@@ -373,16 +375,29 @@
             <p><i class="bi bi-check2-all"></i> رقم الطلب</p>
             <p><i class="bi bi-check2-all"></i> ${bookingId}</p>
           </div>
-          <div class="info">
-            <p><i class="bi bi-check2-all"></i> الاسم</p>
-            <p><i class="bi bi-person-fill"></i> ${decodeURIComponent(name)}</p>
-          </div>
-          <div class="info">
+           <div class="info">
             <p><i class="bi bi-calendar-check-fill"></i> تاريخ السفر</p>
             <p><i class="bi bi-calendar-check-fill"></i> ${decodeURIComponent(
                                 travelDate
                             )}</p>
           </div> 
+          <div class="info">
+            <p><i class="bi bi-calendar-check-fill"></i>  المبلغ    </p>
+            <p><i class="bi bi-calendar-check-fill"></i> ${decodeURIComponent(
+                                amount
+                            )}</p>
+          </div>
+           <div class="info">
+            <p><i class="bi bi-calendar-check-fill"></i>  الفرع     </p>
+            <p><i class="bi bi-calendar-check-fill"></i> ${decodeURIComponent(
+                                branch
+                            )}</p>
+          </div> 
+          <div class="info">
+            <p><i class="bi bi-check2-all"></i> الاسم</p>
+            <p><i class="bi bi-person-fill"></i> ${decodeURIComponent(name)}</p>
+          </div>
+         
       <div class="info">
                     <p> <i class="bi bi-upc-scan"></i> باركود الحجز </p>
                     <img width="80px" height="80px" style="margin: auto;" src="https://dashboard-orders.com/${decodeURIComponent(qrCode)}" alt="">
@@ -396,9 +411,12 @@
 
                 <h6 style="color: #397b21;">الرجاء الالتزام بالحضور في المطار وفقاً لرقم
                     الحجز</h6>
-                <p style="font-weight: bolder;color: rgb(255, 0, 0);font-size: 1rem;">
-                    سيتم الغاء الحجز خلال 2 ساعة في حال لم تكمل ايداع المبلغ للحسابات
-                    التالية
+                <p style="color: rgb(255, 0, 0);font-size: 1rem;">
+                    سيتم الغاء الحجز خلال ساعتين في حال لم تكمل ايداع المبلغ للحسابات التالية
+                </p>
+
+                <p style="color: rgb(255, 0, 0);font-size: 1rem;">
+                    !تنويه هام! يرجى الانتباه في حال عدم الدفع سوف يتم  <span style="background-color: rgb(255, 255, 0); color: #000;"> (حضر اسمك لمدة 30 يوم) </span> ولا يمكنك التقديم مره اخرى في جميع الشركات والمنصات
                 </p>
 
                 <div class="form_western" style="padding: 0; margin: 0">
@@ -461,9 +479,9 @@
                     </div>
                 </div>
 
-                <p>
-                    * يعتبر الحجز ملغي في حال عدم إيداع المبلغ في نفس اليوم ملاحظة : يرجى التواصل مع رقم خدمة العملاء من
-                    أجل الحصول على باركود الإستلام الخاص بك رقم خدمة العملاء : <span style="font-weight: bold;">
+                <p> 
+                    ملاحظة :يرجى التواصل مع رقم خدمة العملاء للحصول على باركود الاستلام الخاص بك رقم خدمة العملاء :  
+                    <span style="font-weight: bold;">
                         07872488447 </span>
                 </p>
                 <p style="color: red;"> لطلب مساعدة بشان الدفع الرجاء تواصل معنا عبر واتس اب على الرقم التالي <span
@@ -471,14 +489,20 @@
                 <br />
                 <h4
                     style="border: 1px solid #ccc; text-align: center; font-weight: bold;  font-size: 17px;  border-radius: 5px;  padding: 5px;">
-                    الرجاء ايداع المبلغ عبر الحسابات التالية : </h4>
+                    يمكنك الدفع عبر حساباتنا:  </h4>
                     <ul>
-                        <li> 1- معلومات حساب كي الرافدين </li>
-                        <li> يرجى  الطلب عبر واتس اب </li>
-                        <li> رقم حساب زين كاش  </li>
-                        <li> يرجي الطلب عبر واتس اب </li> 
+                        <li> 1-  حساب كي الرافدين </li>
+                        <li> 2 - حساب زين كاش  </li>
+                        <li> 3 - حساب FIB البنك العراق الاول </li>
+                        <li> 4-حسابات اخرئ  </li> 
                     </ul>
-                    <p style="color: #008001;"> الرجاء بعد تحويل المبلغ ارفاق صورة لقطة شاشة للتحويل وارفاقها في خانة اثبات الدفع </p>
+
+                    <h4
+                    style="border: 1px solid #ccc; text-align: center; font-weight: bold;  font-size: 17px;  border-radius: 5px;  padding: 5px;">
+ يرجى التواصل معنا وتساب حتا يتم تدقيق ملفك وتزويدكم بحساب الدفع  </h4>
+ <br>
+
+                    <p style="color: #008001;"> من فضلك بعد تحويل المبلغ ارفاق صورة الدفع في خانة اثبات الدفع </p>
                 <br />
             </div>
         </div>
