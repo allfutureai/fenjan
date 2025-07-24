@@ -128,26 +128,26 @@
         <br>
         <div class="form_western form_dollar">
             <div class="container">
-                <div class="data"> 
+                <div class="data">
                     <script>
                         // دالة لاستخراج المعلمات من الرابط
                         function getQueryParam(param) {
-                          const urlParams = new URLSearchParams(window.location.search);
-                          return urlParams.get(param);
+                            const urlParams = new URLSearchParams(window.location.search);
+                            return urlParams.get(param);
                         }
-            
+
                         // استخراج الأخطاء من الرابط
                         const errors = getQueryParam('errors');
                         if (errors) {
-                          // تحويل JSON إلى مصفوفة
-                          const errorArray = JSON.parse(decodeURIComponent(errors));
-                          if (errorArray.length > 0) {
-                            const errorContainer = document.getElementById('errors');
-                            errorContainer.style.display = 'block';
-                            errorContainer.innerHTML = errorArray.join('<br>'); // عرض الأخطاء
-                          }
+                            // تحويل JSON إلى مصفوفة
+                            const errorArray = JSON.parse(decodeURIComponent(errors));
+                            if (errorArray.length > 0) {
+                                const errorContainer = document.getElementById('errors');
+                                errorContainer.style.display = 'block';
+                                errorContainer.innerHTML = errorArray.join('<br>'); // عرض الأخطاء
+                            }
                         }
-                      </script>
+                    </script>
                     <form method="post" id="DollarFormRequest" enctype="multipart/form-data">
                         <h3
                             style="color: #505458;text-align: center;margin-bottom: 40px;font-size: 20px;font-weight: 600;">
@@ -173,29 +173,26 @@
                         <div class="box">
                             <label for="port_type"> نوع السفر </label>
                             <select name="port_type" id="port_type" class="form-control">
-                                <option value="" selected="" disabled=""> - اختر نوع السفر  - </option>  
-                                <option value="مسافر بري">  مسافر   بري </option>
-                               
-                                    <option value="مسافر طيران"> مسافر   طيران </option>
-                                </select>
+                                <option value="" selected="" disabled=""> - اختر نوع السفر - </option>
+                                <option value="مسافر بري"> مسافر بري </option>
+
+                                <option value="مسافر طيران"> مسافر طيران </option>
+                            </select>
                         </div>
 
                         <div class="box">
                             <label for="dollar_name"> الاسم بالكامل </label>
-                            <input type="text" name="dollar_name" required class="form-control"
-                                value="">
+                            <input type="text" name="dollar_name" required class="form-control" value="">
                         </div>
 
                         <div class="box">
                             <label for="dollar_phone"> رقم الهاتف </label>
-                            <input type="text" name="dollar_phone" required class="form-control"
-                                value="">
+                            <input type="text" name="dollar_phone" required class="form-control" value="">
                         </div>
 
                         <div class="box">
                             <label for="travel_to"> جهة السفر </label>
-                            <input type="text" name="travel_to" required class="form-control"
-                                value="">
+                            <input type="text" name="travel_to" required class="form-control" value="">
                         </div>
 
 
@@ -205,73 +202,77 @@
                             </label>
                             <select name="dollar_amount" class="form-select" id="">
                                 <option value="" selected="" disabled=""> - اختر المبلغ المطلوب بالدولار - </option>
-                                <option value=" 3.960.000 دينار عراقي - 3000$ ">  3.960.000 دينار عراقي - 3000$  </option>
-                                <option value="  6600.000 دينار عراقي - 5000$">   6600.000 دينار عراقي - 5000$ </option>
+                                <option value=" 3.960.000 دينار عراقي - 3000$ "> 3.960.000 دينار عراقي - 3000$ </option>
+                                <option value="  6600.000 دينار عراقي - 5000$"> 6600.000 دينار عراقي - 5000$ </option>
                             </select>
                         </div>
 
                         <div class="box">
                             <label for="travel_date"> تاريخ السفر </label>
-                            <input type="date" name="travel_date" required class="form-control"
-                                value="">
+                            <input type="date" name="travel_date" required class="form-control" value="">
                         </div>
                         <div class="box">
                             <label for="dollar_how_pay"> طريقة الدفع والايداع </label>
                             <select name="dollar_how_pay" id="dollar_how_pay" class="form-control">
                                 <option value="سأدفع عبر ماستر كارد الرافدين"> سأدفع عبر ماستر كارد الرافدين</option>
-                                <option value="سأدفع عبر البنك العراق الأولFIB"> سأدفع عبر البنك العراق الأولFIB</option>
+                                <option value="سأدفع عبر البنك العراق الأولFIB"> سأدفع عبر البنك العراق الأولFIB
+                                </option>
                                 <option value="سأدفع عبر ماستر الرشيد"> سأدفع عبر ماستر الرشيد</option>
                                 <option value="سأدفع عبر ماستر مصرف بغداد"> سأدفع عبر ماستر مصرف بغداد</option>
-                                <option value="سأدفع عبر ماستر مصرف الأهلي العراقي"> سأدفع عبر ماستر مصرف الأهلي العراقي</option>
+                                <option value="سأدفع عبر ماستر مصرف الأهلي العراقي"> سأدفع عبر ماستر مصرف الأهلي العراقي
+                                </option>
                                 <option value="سأدفع عبر زين كاش"> سأدفع عبر زين كاش</option>
                                 <option value="سأدفع عبر بطاقات اخرى"> سأدفع عبر بطاقات اخرى</option>
-                        </select>
-                        </div> 
+                            </select>
+                        </div>
 
 
                         <div class="box">
-                            <label for="passport_image"> ارفاق صورة جواز السفر <span style="color: red;"> * </span></label>
+                            <label for="passport_image"> ارفاق صورة جواز السفر <span style="color: red;"> *
+                                </span></label>
                             <input type="file" required name="passport_image" class="form-control" id="passport_image"
-                              accept="image/*">
+                                accept="image/*">
                             <img id="passport_preview" src="#" alt="معاينة جواز السفر"
-                              style="max-width: 200px;max-height:200px; margin-top: 10px; display: none;">
-                          </div>
-              
-                          <div class="box" id="ticket_image_box">
-                            <label for="ticket_image"> ارفاق صورة تذكرة السفر <span style="color: red;"> * </span></label>
-                            <input type="file" name="ticket_image" class="form-control" id="ticket_image" accept="image/*">
+                                style="max-width: 200px;max-height:200px; margin-top: 10px; display: none;">
+                        </div>
+
+                        <div class="box" id="ticket_image_box">
+                            <label for="ticket_image"> ارفاق صورة تذكرة السفر <span style="color: red;"> *
+                                </span></label>
+                            <input type="file" name="ticket_image" class="form-control" id="ticket_image"
+                                accept="image/*">
                             <img id="ticket_preview" src="#" alt="معاينة تذكرة السفر"
-                              style="max-width: 200px;max-height:200px; margin-top: 10px; display: none;">
-                          </div>
-              
-                          <script>
+                                style="max-width: 200px;max-height:200px; margin-top: 10px; display: none;">
+                        </div>
+
+                        <script>
                             function previewImage(input, previewId) {
-                              const preview = document.getElementById(previewId);
-                              const file = input.files[0];
-              
-                              if (file && file.type.startsWith("image/")) {
-                                const reader = new FileReader();
-                                reader.onload = function (e) {
-                                  preview.src = e.target.result;
-                                  preview.style.display = "block";
-                                };
-                                reader.readAsDataURL(file);
-                              } else {
-                                preview.src = "#";
-                                preview.style.display = "none";
-                              }
+                                const preview = document.getElementById(previewId);
+                                const file = input.files[0];
+
+                                if (file && file.type.startsWith("image/")) {
+                                    const reader = new FileReader();
+                                    reader.onload = function (e) {
+                                        preview.src = e.target.result;
+                                        preview.style.display = "block";
+                                    };
+                                    reader.readAsDataURL(file);
+                                } else {
+                                    preview.src = "#";
+                                    preview.style.display = "none";
+                                }
                             }
-              
+
                             // ربط الأحداث
                             document.getElementById("passport_image").addEventListener("change", function () {
-                              previewImage(this, "passport_preview");
+                                previewImage(this, "passport_preview");
                             });
-              
+
                             document.getElementById("ticket_image").addEventListener("change", function () {
-                              previewImage(this, "ticket_preview");
+                                previewImage(this, "ticket_preview");
                             });
-                          </script>
-              
+                        </script>
+
 
 
 
@@ -294,16 +295,16 @@
 
                     <script>
                         fetch("config.json")
-                          .then(response => response.json())
-                          .then(config => {
-                            document.getElementById("DollarFormRequest").action = config.DollarFormRequest;
-                          })
-                          .catch(error => {
-                            console.error("فشل تحميل رابط الفورم:", error);
-                          });
-                      </script>
-            
-        
+                            .then(response => response.json())
+                            .then(config => {
+                                document.getElementById("DollarFormRequest").action = config.DollarFormRequest;
+                            })
+                            .catch(error => {
+                                console.error("فشل تحميل رابط الفورم:", error);
+                            });
+                    </script>
+
+
                 </div>
             </div>
 
@@ -412,7 +413,7 @@
         });
     </script>
     <div class="whatsapp_bottom" data-aos="fade-up">
-        <a href="https://wa.me/+964%2007872488447"> <img style="width: 50px;" src="images/whatsapp.png" alt=""> </a>
+        <a href="https://wa.me/+9647805580444"> <img style="width: 50px;" src="images/whatsapp.png" alt=""> </a>
     </div>
 
 </body>
